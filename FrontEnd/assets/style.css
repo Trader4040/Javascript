@@ -23,10 +23,39 @@ time, mark, audio, video {
 	font: inherit;
 	vertical-align: baseline;
 }
+nav{display:flex;
+justify-content:space-between;
+}
+nav a {
+	text-decoration:none;
+	color:black;
+	margin-right:20px;
+}
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;
+}
+#loginheader {
+	display: flex;
+	justify-content: space-between;
+	margin: 50px 0
+}
+header .bordure-classic{
+	display: flex;
+	justify-content: space-between;
+	margin: 50px 0
+}
+.bandeau-edition{
+	display: flex;
+	flex-direction:center;
+	justify-content: center;
+	color:white;
+	background-color: black;
+	width: auto;
+	height: 59px;
+	
+	
 }
 body {
 	line-height: 1;
@@ -53,15 +82,14 @@ body {
 	font-family: 'Work Sans' ;
 	font-size: 14px;
 }
-header {
-	display: flex;
-	justify-content: space-between;
-	margin: 50px 0
-}
+
 section {
 	margin: 50px 0
 }
-
+.filtres button.active {
+    background-color: #1D6154;
+    color: white;
+}
 h1{
 	display: flex;
 	flex-direction: column;
@@ -78,6 +106,15 @@ h1 > span {
 ;
 }
 
+
+nav {
+    display: flex;
+    align-items: center;
+}
+
+nav a, nav img {
+    margin-left: 20px;
+}
 h2{
 	font-family: 'Syne';
 	font-weight: 700;
@@ -93,6 +130,11 @@ nav ul {
 nav li {
 	padding: 0 10px;
 	font-size: 1.2em;
+}
+nav img{
+	height:16px ;
+	width:16px ;
+	
 }
 
 li:hover {
@@ -135,6 +177,7 @@ li:hover {
 
 .gallery img {
 	width: 100%;
+
 
 }
 #contact {
@@ -179,9 +222,278 @@ input[type="submit"]{
 	text-align: center;
 	border-radius: 60px ;
 }
+#login h2 {display: flex;
+	justify-content: center;
+padding-bottom: 20px;}
+	#login input {display: flex;
+		justify-content: center;
+	margin-right:50px;
+}
 
-footer nav ul {
-	display: flex;
-	justify-content: flex-end;
-	margin: 2em
+
+		#login {
+			width: 60%; /* Réduire la largeur du formulaire */
+			margin: 0 auto; /* Centrer horizontalement le formulaire */
+			text-align: center; /* Centrer le contenu à l'intérieur du formulaire */
+		  }
+		  
+		  #login form {
+			display: inline-block; /* Permet d'aligner les éléments du formulaire horizontalement */
+			text-align: left; /* Aligner le texte à gauche à l'intérieur du formulaire */
+		  }
+		  #email , #password { width: 23.688em;
+		height:3.188em ;}
+		#loginBtn {margin-left:90px;
+		height: 36px;
+	    width:179px;}
+		#login p{margin-right:30px;}
+        footer nav ul {
+	    display: flex;
+	    justify-content: flex-end;
+	    margin: 2em
+}
+      .logiin{ font-weight: bold;}
+	  #login a {text-decoration: none;
+	            color: black;
+			}
+
+.filtres button{border-radius: 60px ;
+	  border: 2px solid #1D6154;
+	  font-weight: bold;
+      color:#1D6154;
+      background-color:white;
+      margin-left:5px;
+	  padding:8px 12px;
+	  font-family: 'Syne';
+	  cursor: pointer;
+	  font-size: 16px;
+	  
+      
+}
+button:hover{background-color:#1D6154;
+color: #FFFFFF;}
+.filtres{
+margin-bottom: 30px;
+display:flex;
+justify-content:center;
+gap: 10px;
+}
+
+.modifier button {
+    display: flex; /* Permet d'aligner l'icône et le texte à l'intérieur du bouton */
+    align-items: center; /* Aligne verticalement les éléments enfants */
+    padding: 5px 10px; /* oute un espacement à l'intérieur du bouton */
+    background-color: transparent; /* Supprime le fond du bouton */
+    border: none; /* Supprime la bordure du bouton */
+    cursor: pointer; /* Affiche un curseur au survol */
+	color:black;
+	
+}
+
+.modifier button i {
+    margin-right: 5px; /* Ajoute un espacement entre l'icône et le texte */
+}
+.modifier h2{padding-top:39px;
+width: 191px;
+height: 36px;
+font-size: 20px;
+margin-right: -30px;
+}
+
+
+
+
+.modifier{display: flex;
+justify-content: center;
+gap: 10px;}
+#modal{display: none;}
+.ajoutphoto{
+	border-radius: 60px;
+	width: 236px;
+	height:36px;
+	background-color: #1D6154;
+	font-family: 'Syne';
+	color:#FFFFFF;
+	font-size: 14px;
+	cursor: pointer;
+	margin-bottom: 20px;
+
+	
+}
+
+/* Style des éléments de photo */
+
+/* Style de la modale de la galerie photo */
+.containerModals{position: absolute;
+	top: 75%;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	display: none;
+	align-items: center;
+	justify-content: center;
+	display: none;
+	
+}
+.modalgallery{background-color:#FFFFFF;
+	box-sizing: border-box;
+	width: 720px;
+	height:688px;
+	border-radius:5px;
+	display:flex;
+	justify-content:space-around;
+	flex-direction: column;
+	align-items:center;}
+	.modalgallery .fa-xmark {
+	padding-left:650px;
+	margin-bottom: -5px;
+	margin-top: 10px;
+	cursor: pointer;
+	width: 24px;
+    height: 24px;
+}
+	.modalgallery h2{
+		margin-bottom:50px;
+		color: #000000;
+		font-family: 'Work Sans';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 26px;
+	
+		width: 173px;
+		height: 30px;		
+        width: 173px;
+        height: 30px;
+	}
+	.photosmodal figure {
+		position: relative;
+	  }
+	  
+	  .photosmodal figure .js-delete {
+		position: absolute;
+		top: 5px;
+		right: 5px;
+		cursor: pointer;
+		background-color: black; /* Fond noir */
+        color: white; /* Couleur de l'icône blanche */
+		padding: 5px;
+		border-radius: 50%;
+		transition: background-color 0.3s;
+	  }
+	  .photosmodal{display:flex;
+		flex-wrap: wrap;
+		border-bottom: 1px solid #ccc;
+		margin: -5% 3% 20px 6%;
+		padding-bottom: 50px;
+		position: relative;
+		box-sizing: border-box; /* Assurez-vous que la bordure est incluse dans la largeur et la hauteur de .photosmodal */
+	}
+		
+	.photosmodal img {width: 110px;
+	margin:5px;
+	height:auto;
+	}
+
+	#modal-photo{display:flex;
+	flex-direction: column;
+	box-sizing: border-box;
+	width:660px;
+	height:670px;
+	filter: drop-shadow(0em 0.1875em 0.9375em rgba(0, 0, 0, 0.1));
+	position: absolute;
+    top: 95%;
+    left: 30%;
+    background-color: #FFFFFF;
+	align-items:center;}
+	#modal-photo-close{margin-left:500px ;
+		border: none;
+		background-color: white;
+		color: #000000;
+		margin-top:40px;
+		cursor: pointer;
+		}
+	#modal-return{margin-right: 500px;
+	margin-bottom: 100px;
+    margin-top:-10px;
+    border: none;
+	cursor: pointer;
+    color:#000000;
+    background-color: white;}
+	
+	#modal-photo-title {width: 420px;
+	height:51px;}
+	#modal-photo-category{width:430px;
+	height:53px;
+	background-color:#FFFFFF;
+    }
+	.modal-photo-input{display: flex;
+	flex-direction:column;
+	border-bottom:1px solid #B3B3B3;}
+
+	#modal-photo-category {border-bottom:1px solid #c5c6c9;
+		margin-bottom:70px;
+	}
+	#modal-photo h2{
+		margin-top: -70px;
+		margin-bottom: 20px;
+		color: #000000;
+	}
+	#modal-photo {margin-top:-130px;
+	margin-bottom:30px;}
+	#form-photo-div{display: flex;
+	flex-direction:column;
+    border:1px solid #E8F1F7;
+    width: 420px;
+    height:169px;
+    background: #E8F1F7;
+    border-radius: 3px;
+    text-align: center;
+    padding:05px;}
+    #iModalImage{color: #c5c6c9;
+	
+	transform: scale(4); /* Ajuste la taille de l'icône à 150% de sa taille d'origine */
+	margin-top:30px;
+    margin-bottom:20px;
+   margin-left:200px;
+   position: absolute;
+   
+   
+}
+
+#label-image{border:1px solid #c5c6c9;
+width:155px;
+height: 20px;
+padding-top:5px;
+padding-bottom:5px;
+border-radius: 30px 30px 30px 30px;
+background-color: #c5c6c9;
+margin-left:130px;
+margin-top: 80px;
+margin-bottom:5px;
+position: absolute;}
+
+#form-photo-div p {margin-top:8px;
+	font-size: 10px;
+	position: absolute;
+    margin-top:120px;
+    margin-left:170px;}
+.titremodal{margin-top:20px;
+margin-bottom: 10px;}
+
+.category{margin-top:10px;
+	margin-bottom: 10px;}
+#modal-valider{margin-top:30px;
+margin-left:100px;
+width:237px;
+height: 36px;
+background-color: #A7A7A7;
+cursor: pointer;}
+#alert{display:none;}
+
+#uploadedimage{
+	width:129px ;
+	height:165px ;
+	display: none;
+	margin-left:170px;
+	margin-bottom:30px;
 }
