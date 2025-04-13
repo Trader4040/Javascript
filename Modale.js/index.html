@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Bouton pour ouvrir -->
+     <button data-modal-target="#modal1">Ouvrir la modale</button>
+
+     <!-- Overlay -->
+      <div id="overlay"></div>
+
+      <!-- Modale -->
+       <div class="modal" id="modal1">
+        <div class="modal-header">
+            <h2>Titre de la modale</h2>
+            <button data-close-button class="close-button">&times;</button>
+        </div>
+        <div class="modal-body">
+            <p>Contenu de la modale...</p>
+        </div>
+       </div>
+</body>
+<script src="./script.js"></script>
+</html>
